@@ -97,3 +97,7 @@ Adhering to the ethos of open research and community contribution, this reposito
   year={2017}
 }
 ```
+
+
+**Note**: This repository is strictly for academic research purposes. For any other use, please contact Alibaba Group for permissions and further details.
+
