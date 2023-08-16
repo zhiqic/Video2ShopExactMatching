@@ -1,17 +1,42 @@
 # Video2Shop: Exact Matching Clothes in Videos to Online Shopping Images
 
-![Python badge](https://img.shields.io/static/v1?label=python&message=3.6%7C3.7%7C3.8&color=blue)
-![PyTorch badge](https://img.shields.io/static/v1?label=pytorch&message=1.6&color=orange)
+<div align="left">
+    <img src="https://img.shields.io/static/v1?label=python&message=3.6%7C3.7%7C3.8&color=blue" alt="Python badge">
+    <img src="https://img.shields.io/static/v1?label=pytorch&message=1.6&color=orange" alt="PyTorch badge">
+</div>
 
-This repository presents an official PyTorch implementation of the Video2Shop algorithm as proposed in the paper: [Exact Matching Clothes in Videos to Online Shopping Images](https://openaccess.thecvf.com/content_cvpr_2017/html/Cheng_Video2Shop_Exact_Matching_CVPR_2017_paper.html).
+
+## Introduction
+
+In today's digital era, videos have taken center stage in how we consume content. From high-impact ads to influencers setting fashion statements, videos are where we see new trends. But how often have you seen an outfit in a video and wondered where to buy it? Enter the **Video2Shop** algorithm, the backbone of the revolutionary **Pailitao** system.
+
+This repository houses an unofficial PyTorch version of the **Video2Shop** algorithm, an innovation making online shopping effortlessly intuitive. See a stunning outfit in a movie or on the street? **Pailitao** ensures it's just a few clicks away from being yours.
+
+<div align="center">
+    <img src="https://github.com/zhiqic/Video2Shop/assets/65300431/257b51d5-cb2d-4dbc-9156-715f67f4444a" alt="Pailitao System" width="80%">
+</div>
+
+📹 Dive into the nitty-gritty details in our paper presented at **CVPR 2017**: [Video2Shop: Exact Matching Clothes in Videos to Online Shopping Images](https://openaccess.thecvf.com/content_cvpr_2017/html/Cheng_Video2Shop_Exact_Matching_CVPR_2017_paper.html).
+
+🎥 For a firsthand look at **Video2Shop** in action, don't miss this [YouTube demo](https://www.youtube.com/watch?v=FK-m7YXuf5Y).
+
+
+### Patent Information:
+- **Patent:** [US10671851B2](https://patents.google.com/patent/US10671851B2/en)
+- **Country:** United States
+- **Assignee:** Alibaba Group Holding Ltd
+- **Status:** Active, with validity up to 2038-09-29 
 
 ## Overview
 
-The Video2Shop algorithm enables exact matching of clothing items from videos to corresponding online shopping images, helping bridge the gap between video content and e-commerce platforms.
+The Video2Shop algorithm, as its name suggests, is adept at matching clothing items from videos directly to their online shopping counterparts. Not only does this bridge the ever-expanding realm of video content with e-commerce platforms, but it also addresses the latent consumer need for instant gratification in the digital shopping realm.
+
+<div align="center">
+    <img src="https://github.com/zhiqic/Video2Shop/assets/65300431/24dcc82a-87bf-4e45-97b6-cc4146b37ecf" alt="AsymNet Framework">
+    <p><i>Figure 1. Framework of AsymNet. After clothing detection and tracking, deep visual features are produced by the Image Feature Network (IFN) and Video Feature Network (VFN). These features then undergo pair-wise matching in the similarity network.</i></p>
+</div>
 
 ## Installation
-
-To ensure a smooth setup, it is recommended to use a conda environment.
 
 ### Prerequisites
 
@@ -47,16 +72,8 @@ To ensure a smooth setup, it is recommended to use a conda environment.
 To initiate training on a single GPU:
 
 ```bash
-python train.py -tph <training_phase: 0 first part - 1 fusion nodes - 2 both> -e <num_epochs> -lr <learning-rate> --dataset <path-to-dataset> --gpus 0
+python train.py -tph <training_phase> -e <num_epochs> -lr <learning-rate> --dataset <path-to-dataset> --gpus 0
 ```
-
-- `<training_phase>`: Define which part of the model to train.
-  - 0: Train the first part
-  - 1: Train fusion nodes
-  - 2: Train both
-- `<num_epochs>`: Number of epochs for training
-- `<learning-rate>`: Learning rate for the optimizer
-- `<path-to-dataset>`: Path to the dataset directory
 
 ## Evaluation
 
@@ -66,15 +83,10 @@ To evaluate the trained model:
 python evaluation.py -ckpt <path-to-checkpoint>
 ```
 
-- `<path-to-checkpoint>`: Path to the saved model checkpoint
-
-## Contribution
-
-Feel free to raise issues or pull requests if you find any bugs or improvements in the code.
+## Acknowledgement
+Adhering to the ethos of open research and community contribution, this repository welcomes the academic community's feedback. While this is an unofficial and independent reproduction, its primary use case leans towards academic research. Commercial utilization is discouraged. Props to [kyusbok](https://github.com/kyusbok) for the initial replication endeavors. Kindly raise issues or submit pull requests for any enhancements or identified bugs.
 
 ## Citation
-
-If you find this implementation beneficial and utilize it in your research, please cite using the following BibTeX entry:
 
 ```
 @inproceedings{cheng2017video2shop,
