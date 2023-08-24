@@ -6,8 +6,6 @@
 </div>
 
 
-## Introduction
-
 In today's digital era, videos have taken center stage in how we consume content. From high-impact ads to influencers setting fashion statements, videos are where we see new trends. But how often have you seen an outfit in a video and wondered where to buy it? Enter the **Video2Shop** algorithm, the backbone of the revolutionary **Pailitao** system.
 
 This repository houses an unofficial PyTorch version of the **Video2Shop** algorithm, an innovation making online shopping effortlessly intuitive. See a stunning outfit in a movie or on the street? **Pailitao** ensures it's just a few clicks away from being yours.
